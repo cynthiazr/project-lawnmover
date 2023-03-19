@@ -112,8 +112,22 @@ public:
   // Return true when this disk_state is fully sorted, with all light disks on
   // the left (low indices) and all dark disks on the right (high indices).
   bool is_sorted() const {
-      
-      return true;
+    int half_count = total_count() / 2;
+
+    for (int i = 0; i < total_count(); i++)
+    {
+      // It will loop only through the first half
+      if (i < half_count)
+      {
+        // Will check if the first half there is dark disks, if there is then the list is not sorted
+        if (_colors[i] == DISK_DARK)
+        {
+          return false;
+        }
+      }
+    }
+          
+    return true;
   }
 };
 
