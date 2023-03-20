@@ -1,4 +1,4 @@
-# Project-Lawnmover
+# Project-Lawnmower
 
 ## Description
 In this project, there are two algorithms, lawnmower and alternate. These algorithms would sort an unsorted list of disks (light and dark) by having the light disks first and then the dark disks.
